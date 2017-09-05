@@ -15,16 +15,16 @@
   "scripts": {
     "deploy": "gcloud app deploy",
     "start": "node app.js",
-    "lint": "samples lint",
-    "pretest": "npm run lint",
-    "system-test": "samples test app",
-    "test": "npm run system-test",
-    "e2e-test": "samples test deploy"
+    "test": "mocha test"
   },
   "dependencies": {
-    "express": "4.15.4"
+    "body-parser": "1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "4.15.4",
+    "multer": "^1.0.5"
   },
   "devDependencies": {
-    "@google-cloud/nodejs-repo-tools": "1.4.17"
+    "@google-cloud/nodejs-repo-tools": "1.4.17",
+    "redis-mock": "^0.20.0"
   }
 }
