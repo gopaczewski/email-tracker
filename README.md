@@ -28,18 +28,18 @@ npm test
 
 1. Create a recipient and associate with the pre-existing "pcio" account:
 
-$ curl -v http://localhost:8080/pcio/pixel -H 'Content-Type: application/json' --data '{"email": "gopaczewski@gmail.com"}'
+  `$ curl -v http://localhost:8080/pcio/pixel -H 'Content-Type: application/json' --data '{"email": "gopaczewski@gmail.com"}'`
 
 1. Retrieve the markup template to be included in an email to the recipient:
 
-$ curl -v http://localhost:8080/pcio/pixel/1
+  `$ curl -v http://localhost:8080/pcio/pixel/1`
 
-(This should be the same URL as returned in the Location header of the first request)
+  (This should be the same URL as returned in the Location header of the first request)
 
 1. Simulate an email opening for the first time on a device:
 
-$ curl -v 'http://localhost:8080/v?u=1&aid=pcio'
+  `$ curl -v 'http://localhost:8080/v?u=1&aid=pcio'`
 
 1. Simulate an email open on a repeat device:
 
-$ curl -v --cookie "rid=1" 'http://localhost:8080/v?u=1&aid=pcio'
+  `$ curl -v --cookie "rid=1" 'http://localhost:8080/v?u=1&aid=pcio'`
